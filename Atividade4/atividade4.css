@@ -1,0 +1,91 @@
+body{
+    font-family: "Segoe UI", 'Segoe UI', Tahoma;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: black;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+nav ul li {
+ 
+    display: inline-block;
+    margin-right: 10px;
+    margin-right: 60px;
+
+}
+
+
+
+.container{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    gap: 30px;
+   
+}
+
+
+.card{
+    flex-basis: calc(100% );
+    background-color: HSL(221, 42%, 43%);
+    color: aliceblue;
+    text-align: center;
+    padding: 20px;
+    border-radius: 3px;
+    height: 350px;
+}
+
+.card h2{
+    margin-top: 0;
+}
+
+#principal{
+    background-color: grey;
+    height: 450px;
+    text-align: center;
+    
+}
+
+#secundario{
+    background-color: grey;
+    height: 450px;
+    text-align: center;
+    
+}
+
+
+.card p{
+    margin-top: 5px 0;
+    font-size: small;
+}
+
+.card img{ 
+    border: 1px solid #e0e0e0;
+    max-width: 80%; 
+    height: auto;   
+    text-align: center;
+}
+
+button{
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px 2px red;
+}
+
+footer {
+    background-color: black;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align:center;
+}
