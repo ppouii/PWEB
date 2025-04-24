@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 12</title>
+    <script>
+        
+         function Retangulo(x , y){
+            this.base = x;
+            this.altura = y;
+
+            this.CalcArea = function(){
+                return this.altura * this.base;
+            };
+        }
+        altura = parseFloat(prompt("Digite a altura: "))
+        base = parseFloat(prompt("Digite a base: "))
+
+        objRetangulo = new Retangulo(altura,base);
+
+        alert(objRetangulo.CalcArea());
+
+        class Conta{
+            constructor(nomeCorrentista, banco, numeroConta, saldo) {
+                this._nomeCorrentista = nomeCorrentista;
+                this._banco = banco;
+                this._numeroConta = numeroConta;
+                this._saldo = saldo;
+            }
+        
+
+    get nomeCorrentista() {
+        return this._nomeCorrentista;
+    }
+
+    set nomeCorrentista(nomeCorrentista) {
+        this._nomeCorrentista = nomeCorrentista;
+    }
+
+    get banco() {
+        return this._banco;
+    }
+
+    set banco(banco) {
+        this._banco = banco;
+    }
+
+    get numeroConta() {
+        return this._numeroConta;
+    }
+
+    set numeroConta(numeroConta) {
+        this._numeroConta = numeroConta;
+    }
+
+    get saldo() {
+        return this._saldo;
+    }
+
+    set saldo(valor) {
+        this._saldo = valor;
+    }
+
+        }
+
+
+class Corrente extends Conta {
+    constructor(nomeCorrentista, banco, numeroConta, saldo, saldoEspecial) {
+        super(nomeCorrentista, banco, numeroConta, saldo);
+        this._saldoEspecial = saldoEspecial;
+    }
+
+    get saldoEspecial() {
+        return this._saldoEspecial;
+    }
+
+    set saldoEspecial(valor) {
+        this._saldoEspecial = valor;
+    }
+}
+
+
+class Poupanca extends Conta {
+    constructor(nomeCorrentista, banco, numeroConta, saldo, juros, dataVencimento) {
+        super(nomeCorrentista, banco, numeroConta, saldo);
+        this._juros = juros;
+        this._dataVencimento = dataVencimento;
+    }
+
+    get juros() {
+        return this._juros;
+    }
+
+    set juros(valor) {
+        this._juros = valor;
+    }
+
+    get dataVencimento() {
+        return this._dataVencimento;
+    }
+
+    set dataVencimento(data) {
+        this._dataVencimento = data;
+    }
+}
+
+
+contaCorrente = new Corrente(prompt("Digite seu nome:"),prompt("Digite seu banco: "),parseInt(prompt("Digite o numero da sua conta: ")),
+prompt("Digite o saldo: "),prompt("Digite o Saldo Especial:"));
+
+alert(`Nome: ${contaCorrente.nomeCorrentista}
+\nBanco: ${contaCorrente.banco}
+\nNúmero da Conta: ${contaCorrente.numeroConta}
+\nSaldo: R$ ${contaCorrente.saldo}
+\nSaldo Especial: R$ ${contaCorrente.saldoEspecial}`);
+
+contaPoupanca = new Poupanca(prompt("Digite seu nome:"),prompt("Digite seu banco: "),parseInt(prompt("Digite o numero da sua conta: ")),
+prompt("Digite o saldo: "),prompt("Digite o Juros: "),prompt("Digite a Data de Vencimento: "));
+
+alert(`Nome: ${contaPoupanca.nomeCorrentista}
+\nBanco: ${contaPoupanca.banco}
+\nNúmero da Conta: ${contaPoupanca.numeroConta}
+\nSaldo: R$ ${contaPoupanca.saldo}
+\nJuros: R$ ${contaPoupanca.juros}
+\nData de Vencimento: ${contaPoupanca.dataVencimento}`);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
