@@ -65,7 +65,7 @@
         }
 
 
-class Corrente extends Conta {
+class ContaCorrente extends Conta {
     constructor(nomeCorrentista, banco, numeroConta, saldo, saldoEspecial) {
         super(nomeCorrentista, banco, numeroConta, saldo);
         this._saldoEspecial = saldoEspecial;
@@ -81,7 +81,7 @@ class Corrente extends Conta {
 }
 
 
-class Poupanca extends Conta {
+class ContaPoupanca extends Conta {
     constructor(nomeCorrentista, banco, numeroConta, saldo, juros, dataVencimento) {
         super(nomeCorrentista, banco, numeroConta, saldo);
         this._juros = juros;
@@ -106,7 +106,7 @@ class Poupanca extends Conta {
 }
 
 
-contaCorrente = new Corrente(prompt("Digite seu nome:"),prompt("Digite seu banco: "),parseInt(prompt("Digite o numero da sua conta: ")),
+contaCorrente = new ContaCorrente(prompt("Digite seu nome:"),prompt("Digite seu banco: "),parseInt(prompt("Digite o numero da sua conta: ")),
 prompt("Digite o saldo: "),prompt("Digite o Saldo Especial:"));
 
 alert(`Nome: ${contaCorrente.nomeCorrentista}
@@ -115,7 +115,7 @@ alert(`Nome: ${contaCorrente.nomeCorrentista}
 \nSaldo: R$ ${contaCorrente.saldo}
 \nSaldo Especial: R$ ${contaCorrente.saldoEspecial}`);
 
-contaPoupanca = new Poupanca(prompt("Digite seu nome:"),prompt("Digite seu banco: "),parseInt(prompt("Digite o numero da sua conta: ")),
+contaPoupanca = new ContaPoupanca(prompt("Digite seu nome:"),prompt("Digite seu banco: "),parseInt(prompt("Digite o numero da sua conta: ")),
 prompt("Digite o saldo: "),prompt("Digite o Juros: "),prompt("Digite a Data de Vencimento: "));
 
 alert(`Nome: ${contaPoupanca.nomeCorrentista}
