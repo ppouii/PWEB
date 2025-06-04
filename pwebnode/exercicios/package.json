@@ -4,7 +4,7 @@
   "description": "site da fatec",
   "main": "callback1.js",
   "scripts": {
-    "start": "nodemon exercicio7.js"
+    "start": "npx nodemon app.js"
   },
   "author": "Deivid",
   "license": "ISC",

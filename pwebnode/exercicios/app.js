@@ -1,22 +1,20 @@
-let express = require('express');
-
-let app=express();
-
-app.set('view engine','ejs');
+let app = require('./app/config/server');
 
 app.get('/', function(req,res){
-    res.send("<html><body>Site da Fatec Sorocaba</body></html>")
+    res.render("home/index");
 });
-app.get('/historia', function(req,res){
-    res.render("secao/historia");
+app.get('/formulario_adicionar_usuario', function(req,res){
+    res.render("admin/adicionar_usuario");
+})
+app.get('/informacao/historia', function(req,res){
+    res.render("informacao/historia");
 });
-app.get('/cursos', function(req,res){
-    res.render("secao/cursos");
-})
-app.get('/professores', function(req,res){
-    res.render("secao/professores");
-})
-
+app.get('/informacao/curso', function(req,res){
+    res.render("informacao/cursos");
+});
+app.get('/informacao/professores', function(req,res){
+    res.render("informacao/professores");
+});
 app.listen(3000, function(){
-    console.log("servidor com express foi carregado")
+    console.log("servidor com express foi carregado");
 });
