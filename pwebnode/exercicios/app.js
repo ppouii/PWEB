@@ -1,20 +1,20 @@
 let app = require('./app/config/server');
 
-app.get('/', function(req,res){
-    res.render("home/index");
-});
-app.get('/formulario_adicionar_usuario', function(req,res){
-    res.render("admin/adicionar_usuario");
-})
-app.get('/informacao/historia', function(req,res){
-    res.render("informacao/historia");
-});
-app.get('/informacao/curso', function(req,res){
-    res.render("informacao/cursos");
-});
-app.get('/informacao/professores', function(req,res){
-    res.render("informacao/professores");
-});
+let rotaHome = require('./app/routes/home')
+rotaHome(app);
+
+let rotaAdicionarUsuario = require('./app/routes/adicionar_usuario')
+rotaAdicionarUsuario(app);
+
+let rotaHistoria = require('./app/routes/historia')
+rotaHistoria(app);
+
+let rotaCursos = require('./app/routes/cursos')
+rotaCursos(app);
+
+let rotaProfessores = require('./app/routes/professores')
+rotaProfessores(app);
+
 app.listen(3000, function(){
     console.log("servidor com express foi carregado");
 });
