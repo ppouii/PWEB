@@ -20,9 +20,9 @@ async function getProfessores() {
 
         const result =  await pool.request().query('select*from professores')
 
-        res.json(result.recordset);
+        //res.json(result.recordset);
 
-        res.render("informacao/professores",{profs: result.recordset})
+        res.render("informacao/professores",{profs: result.recordset});
 
     }catch(err){
         console.log(err)
