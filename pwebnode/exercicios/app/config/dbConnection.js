@@ -1,5 +1,5 @@
 let sql = require('mssql')
-module.exports = function(){
+let connSQLServer = function(){
     const sqlConfig = {
         user: 'BD2313018',
         password: 'Ppouii1546',
@@ -11,4 +11,9 @@ module.exports = function(){
         }
 }
 return sql.connect(sqlConfig);
+}
+
+module.exports = function(){
+    console.log('O autoload carregou o módulo de conexão com o db');
+    return connSQLServer;
 }
