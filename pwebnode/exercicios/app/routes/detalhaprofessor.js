@@ -4,8 +4,11 @@ module.exports = function(app){
              try {
                  let connection = app.config.dbConnection;
                  const pool = await connection();
-                 const results = await pool.request().query('SELECT * FROM professores WHERE id_professor = 5') // atenção para funcionar tem que existem o professor com esse ID
-                 res.render('informacao/professores/detalhaprofessor',{profs :  results.recordset});
+
+                 let professoresModel = app.models.professormodel;
+                    //const results = await pool.request().query('SELECT * FROM professores WHERE id_professor = 5') // atenção para funcionar tem que existem o professor com esse ID
+                    professoresModel.getProfessor(pool, function(error, results){
+                 res.render('informacao/professores/detalhaprofessor',{profs :  results.recordset})})
              } catch (err) {
                  console.log(err)
              }

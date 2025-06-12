@@ -5,8 +5,12 @@ module.exports = function(app){
             try{
                 let connection = app.config.dbConnection;
                 const pool = await connection();
-                const result =  await pool.request().query('select*from professores')        
-                res.render("informacao/professores",{profs: result.recordset})}
+
+                let professoresModel = app.models.professormodel;
+                //const results =  await pool.request().query('select*from professores') 
+                professoresModel.getProfessores(pool, function(error, results){
+                res.render("informacao/professores",{profs: results.recordset})})
+            }
                 catch(err){
                     console.log(err)
                 }
