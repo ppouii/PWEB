@@ -3,13 +3,13 @@ module.exports = function (app) {
       async function getProf() {
         try {
           const pool = app.config.dbConnection();
-          let professoresModel = app.models.professormodel();
+          let professoresModel = app.models.professoresmodel();
           professoresModel.getProfessores(pool, function (err, results) {
             res.render('admin/crud_professores', { profs: results.rows });
           });
         } catch (err) {
           console.error(err);
-          res.status(500).send('Erro ao consultar dados' + err.message);
+          res.status(500).send('Erro ao consultar dados ' + err.message);
         }
       }
   
