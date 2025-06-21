@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #fdf8ee;
+  color: #000;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.editar_container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fef7ec;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.editar_form input,
+.editar_form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.75rem;
+  background-color: #fffaf1;
+}
+
+.editar_form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form_acoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.btn_cancelar {
+  background-color: #ff9898;
+  color: #000;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn_cancelar:hover {
+  background-color: #ff5c5c;
+  transform: scale(1.05);
+}
+
+.btn_salvar {
+  background-color: #a8ec98;
+  color: #000;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn_salvar:hover {
+  background-color: #7fe36e;
+  transform: scale(1.05);
+}

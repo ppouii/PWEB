@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #fdf8ee;
+  color: #000;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+header img {
+  width: 50px;
+  height: 50px;
+}
+
+.container_principal {
+  display: flex;
+  justify-content: center;
+}
+
+.container_lista{
+  width: 100%;
+  max-width: 900px;
+}
+
+.section_pesquisa {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#pesquisa {
+  flex-grow: 1;
+  padding: 1rem 3rem 1rem 2.5rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.75rem;
+  background-color: #eee5d0;
+  background-repeat: no-repeat;
+  background-position: 1rem center;
+}
+
+#limpar {
+  background-color: #eee5d0;
+  border: none;
+  font-size: 1.8rem;
+  line-height: 1;
+  padding: 0 0.8rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#limpar:hover {
+  background-color: #e2d7bd;
+}
+
+.livros {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.lista_livros {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+.card_livro {
+  position: relative;
+  background-color: #fef7ec;
+  border: 1px solid #f2e8d9;
+  border-radius: 1rem;
+  padding: 1.2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.card_livro h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card_livro p {
+  font-size: 1.1rem;
+  margin: 0.2rem 0;
+}
+
+.card_livro p span {
+  font-weight: bold;
+}
+
+
+.btn_excluir {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #ff5c5c;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.btn_excluir:hover {
+  color: #ff0000;
+}
+
+.btn_cadastrar {
+  background-color: #eee5d0;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+  height: fit-content;
+  align-self: flex-start;
+}
+
+.btn_cadastrar:hover {
+  background-color: #e2d7bd;
+}
+
+@media (max-width: 768px) {
+  .livros {
+    flex-direction: column;
+  }
+  .btn_cadastrar{
+    align-self: stretch;
+    text-align: center;
+  }
+}

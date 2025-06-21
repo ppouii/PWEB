@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detalhes do Livro</title>
+  <link rel="stylesheet" href="CSS/detalhes.css" />
+</head>
+<body>
+  <header>
+    <h1>Detalhes do Livro</h1>
+  </header>
+
+  <main class="detalhes_container">
+    <div class="detalhes_conteudo">
+      <img id="capaLivro" src="" alt="Capa do livro" />
+      <div class="detalhes_info">
+        <h2 id="tituloLivro"></h2>
+        <p><span>Autor:</span> <span id="autorLivro"></span></p>
+        <p><span>Páginas:</span> <span id="paginasLivro"></span></p>
+        <p><span>Gênero:</span> <span id="generoLivro"></span></p>
+        <p><span>Avaliação:</span> <span id="avaliacaoLivro"></span></p>
+      </div>
+    </div>
+
+    <section class="detalhes_sinopse">
+      <strong>Sinopse:</strong>
+      <p id="sinopseLivro"></p>
+      <button id="expandir_Sinopse" class="btn_expandir">Mostrar mais</button>
+    </section>
+
+    <div class="detalhes_acoes">
+      <button class="editar" id="btn_Editar">Editar</button>
+      <button class="voltar" id="btn_Voltar">Voltar</button>
+    </div>
+  </main>
+
+  <script src="JS/storage.js"></script>
+  <script src="JS/detalhes.js"></script>
+</body>
+</html>
